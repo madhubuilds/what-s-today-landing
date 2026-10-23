@@ -19,12 +19,12 @@ export default function HomePage() {
 
       <section className="hero-section">
         <div
-          style={{ display: "inline" }}
-          className="font-inter bg-yellow py-2 px-1 border-1 border-main"
+          style={{ display: "inline-block" }}
+          className="font-inter bg-yellow py-2 px-1 border-1 border-main shadow-1 my-4"
         >
           A NEW WAY TO SOCIALIZE
         </div>
-        <h2 className="hero-headline font-space text-uppercase">
+        <h2 className="text-8 font-space text-uppercase">
           your world. your rules.
         </h2>
         <p className="hero-body font-inter">

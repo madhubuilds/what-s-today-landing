@@ -12,8 +12,10 @@
   color: var(--color-ink);
   cursor: pointer;
   /* Defaults to an 8px shadow */
-  box-shadow: var(--sp-2) var(--sp-2) 0px 0px var(--shadow-color);
-  transition: transform 0.1s ease, box-shadow 0.1s ease;
+  box-shadow: var(--sp-1) var(--sp-1) 0px 0px var(--shadow-color);
+  transition:
+    transform 0.1s ease,
+    box-shadow 0.1s ease;
 }
 
 /* Brutalist Click Action */
@@ -23,8 +25,19 @@
 }
 
 /* Variants */
-.btn-orange { background-color: var(--color-orange); }
-.btn-yellow { background-color: var(--color-yellow); }
-.btn-navy { background-color: var(--color-navy); color: var(--color-surface); }
-.btn-pink { background-color: var(--color-pink); }
-.btn-lime { background-color: var(--color-lime); }
+.btn-orange {
+  background-color: var(--color-orange);
+}
+.btn-yellow {
+  background-color: var(--color-yellow);
+}
+.btn-navy {
+  background-color: var(--color-navy);
+  color: var(--color-surface);
+}
+.btn-pink {
+  background-color: var(--color-pink);
+}
+.btn-lime {
+  background-color: var(--color-lime);
+}

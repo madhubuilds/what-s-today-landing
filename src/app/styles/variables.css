@@ -13,23 +13,23 @@
   --color-cyan: #00ffff; /* New: Bright Cyan */
   --color-violet: #8a2be2; /* New: Deep Violet */
 
-  /* 4px Spacing System */
-  --sp-1: 4px;
-  --sp-2: 8px;
-  --sp-3: 12px;
-  --sp-4: 16px;
-  --sp-5: 20px;
-  --sp-6: 24px;
-  --sp-8: 32px;
-  --sp-10: 40px;
-  --sp-12: 48px;
+  /* Define the master base unit */
+  --base-unit: 4px;
 
-  /* Border Widths (4px Scale) */
-  --bw-1: 2px; /* Exception for subtle elements */
-  --bw-2: 4px;
-  --bw-3: 8px;
-  --bw-4: 12px;
-  --bw-5: 16px;
+  /* Calculate the entire scale dynamically */
+  --sp-1: var(--base-unit);
+  --sp-2: calc(var(--base-unit) * 2); /* 8px */
+  --sp-3: calc(var(--base-unit) * 3); /* 12px */
+  --sp-4: calc(var(--base-unit) * 4); /* 16px */
+  --sp-5: calc(var(--base-unit) * 5); /* 20px */
+  --sp-6: calc(var(--base-unit) * 6); /* 24px */
+  --sp-8: calc(var(--base-unit) * 8); /* 32px */
+
+  /* You can do the same for border widths */
+  --bw-base: 2px;
+  --bw-1: var(--bw-base);
+  --bw-2: calc(var(--bw-base) * 2); /* 4px */
+  --bw-3: calc(var(--bw-base) * 4); /* 8px */ 
 
   /* Shadow Setup (Defaults to Ink) */
   --shadow-color: var(--color-ink);
