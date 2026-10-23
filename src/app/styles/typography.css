@@ -1,0 +1,30 @@
+/* =========================================
+   TYPOGRAPHY
+   ========================================= */
+/* Font Weights */
+.fw-normal { font-weight: 400; }
+.fw-bold { font-weight: 700; }
+.fw-black { font-weight: 900; }
+
+/* 4px-Scaled Typography */
+.text-1 { font-size: 12px; }
+.text-2 { font-size: 16px; }  /* Base */
+.text-3 { font-size: 20px; }
+.text-4 { font-size: 24px; }
+.text-5 { font-size: 32px; }
+.text-6 { font-size: 40px; }
+.text-7 { font-size: 48px; }
+.text-8 { font-size: 64px; }
+.text-9 { font-size: 80px; }
+.text-10 { font-size: 96px; } /* Massive Hero Text */
+
+/* Adjustments */
+.text-uppercase { text-transform: uppercase; }
+.tracking-tight { letter-spacing: -0.05em; } /* Crucial for blocky headers */
+.tracking-tighter { letter-spacing: -0.08em; }
+.leading-none { line-height: 1; }
+.leading-tight { line-height: 1.1; }
+
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
