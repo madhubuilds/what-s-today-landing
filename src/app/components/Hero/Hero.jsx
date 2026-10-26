@@ -1,76 +1,106 @@
 import { ArrowRight, MapPin, Clock, Users } from "lucide-react";
+
 export default function Hero() {
   return (
-    <section className="flex flex-col items-center justify-center text-center mt-12 md:mt-20 w-full max-w-4xl mx-auto">
-      {/* Main Typography */}
-      <h1 className="font-display text-5xl md:text-7xl font-extrabold tracking-tight text-slate-900 mb-6 leading-[1.1]">
-        Stop scrolling. <br />
-        <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-indigo-600">
-          Start exploring.
+    <section className="mx-auto mt-10 flex w-full flex-col items-center px-4 text-center sm:mt-14 sm:px-6 lg:mt-20 lg:w-[75%] lg:px-0">
+      {/* Hero copy */}
+      <div className="w-full max-w-4xl">
+        <span className="mb-5 inline-flex items-center gap-2 rounded-md border-2 border-black bg-[#FFE45C] px-3 py-1.5 text-xs font-extrabold uppercase tracking-wide text-black shadow-[3px_3px_0px_0px_#000]">
+          <span className="h-2 w-2 rounded-full bg-green-600" />A new way to
+          experience your city
         </span>
-      </h1>
-      <p className="text-lg md:text-xl text-slate-600 max-w-2xl mb-10 leading-relaxed">
-        Hyderabad's real-time social radar. We cut through the algorithm noise
-        to connect you with hidden spots, live events, and activities happening
-        exactly right now.
-      </p>
 
-      {/* Email Capture Form */}
+        <h1 className="mb-5 text-4xl font-extrabold leading-[1.08] tracking-tight text-slate-950 sm:text-5xl md:text-6xl lg:text-7xl">
+          Your city.
+          <br />
+          Your moment.
+          <br />
+          <span className="text-fuchsia-500">Go find it.</span>
+        </h1>
+
+        <p className="mx-auto mb-8 max-w-2xl text-base leading-relaxed text-slate-600 sm:text-lg md:text-xl">
+          Discover nearby places, spontaneous plans, and things happening around
+          you. Find your next favourite spot, meet your kind of people, and make
+          today worth stepping out for.
+        </p>
+      </div>
+
+      {/* Early access form */}
       <form
         onSubmit={(e) => e.preventDefault()}
-        className="w-full max-w-md flex flex-col sm:flex-row gap-3 mb-8"
+        className="mb-5 flex w-full max-w-lg flex-col gap-3 sm:flex-row"
       >
         <input
           type="email"
-          placeholder="Enter your email address"
+          placeholder="Your email address"
+          aria-label="Your email address"
           required
-          className="flex-1 px-5 py-3.5 rounded-xl border border-slate-200 bg-white shadow-sm focus:outline-none focus:ring-2 focus:ring-teal-500/50 focus:border-teal-500 transition-all text-slate-900 placeholder:text-slate-400"
+          className="min-w-0 flex-1 rounded-md border-2 border-black bg-white px-4 py-3.5 text-base text-slate-950 shadow-[3px_3px_0px_0px_#000] outline-none transition-shadow placeholder:text-slate-400 focus:shadow-[5px_5px_0px_0px_#000]"
         />
+
         <button
           type="submit"
-          className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-slate-900 text-white font-medium hover:bg-slate-800 transition-all shadow-md hover:shadow-xl hover:-translate-y-0.5"
+          className="inline-flex shrink-0 items-center justify-center gap-2 rounded-md border-2 border-black bg-[#FFE45C] px-5 py-3.5 font-extrabold text-black shadow-[4px_4px_0px_0px_#000] transition-all duration-150 hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-[3px_3px_0px_0px_#000] active:translate-x-1 active:translate-y-1 active:shadow-none"
         >
-          Get Access
-          <ArrowRight className="w-4 h-4" />
+          Get Early Access
+          <ArrowRight className="h-4 w-4" />
         </button>
       </form>
-      <p className="text-sm text-slate-500 font-medium flex items-center gap-2 mb-16">
-        <Users className="w-4 h-4" />
-        Join 50+ early explorers shaping V1
+
+      <p className="mb-12 flex items-center justify-center gap-2 text-sm font-medium text-slate-500 sm:mb-16">
+        <Users className="h-4 w-4 shrink-0" />
+        Help shape the first version of What’s Today?
       </p>
 
-      {/* Floating App Card Mockup */}
-      <div className="relative w-full max-w-sm text-left bg-white/60 backdrop-blur-xl border border-white rounded-3xl p-5 shadow-2xl hover:shadow-3xl transition-shadow duration-500 hover:-translate-y-1">
-        {/* Subtle Top Glow inside the card */}
-        <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-teal-400/50 to-transparent"></div>
-
-        <div className="flex justify-between items-start mb-4">
-          <div className="bg-indigo-50 text-indigo-700 text-xs font-bold px-2.5 py-1 rounded-md">
+      {/* Live discovery preview */}
+      <div className="relative w-full max-w-md -rotate-1 rounded-xl border-2 border-black bg-white p-4 text-left shadow-[7px_7px_0px_0px_#000] transition-transform duration-200 hover:rotate-0 sm:p-6">
+        <div className="mb-5 flex items-center justify-between gap-3">
+          <span className="inline-flex items-center gap-2 rounded-md border-2 border-black bg-[#C8F7DC] px-2.5 py-1.5 text-xs font-extrabold text-black">
+            <span className="h-2 w-2 rounded-full bg-green-600" />
             HAPPENING NOW
-          </div>
-          <span className="text-xs font-semibold text-slate-400">
-            0.5 km away
           </span>
+
+          <span className="text-xs font-bold text-slate-500">NEAR YOU</span>
         </div>
 
-        <h3 className="font-display text-xl font-bold text-slate-900 mb-2">
-          Underground Indie Music Gig
-        </h3>
+        <div className="mb-4 flex items-start gap-3">
+          <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg border-2 border-black bg-[#DCD5FF]">
+            <span className="text-2xl">🎸</span>
+          </div>
 
-        <div className="flex flex-col gap-2 text-sm text-slate-600 mb-5">
-          <span className="flex items-center gap-2">
-            <MapPin className="w-4 h-4 text-slate-400" />
+          <div className="min-w-0">
+            <h2 className="font-extrabold leading-snug text-slate-950 sm:text-lg">
+              Underground Indie Music Gig
+            </h2>
+            <p className="mt-1 text-sm text-slate-600">
+              A local find worth checking out.
+            </p>
+          </div>
+        </div>
+
+        <div className="mb-5 flex flex-col gap-2 text-sm text-slate-600">
+          <span className="flex items-start gap-2">
+            <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-teal-700" />
             Moonshine Cafe, Jubilee Hills
           </span>
-          <span className="flex items-center gap-2">
-            <Clock className="w-4 h-4 text-slate-400" />
-            Started 15 mins ago • Ends at 11 PM
+
+          <span className="flex items-start gap-2">
+            <Clock className="mt-0.5 h-4 w-4 shrink-0 text-teal-700" />
+            Check the event details and timing
           </span>
         </div>
 
-        <button className="w-full py-2.5 rounded-lg bg-teal-50 text-teal-700 font-semibold hover:bg-teal-100 transition-colors text-sm">
-          View Details
+        <button
+          type="button"
+          className="flex w-full items-center justify-center gap-2 rounded-md border-2 border-black bg-slate-950 px-4 py-3 text-sm font-extrabold text-white transition-colors hover:bg-slate-800"
+        >
+          Explore what’s happening
+          <ArrowRight className="h-4 w-4" />
         </button>
+
+        <p className="mt-3 text-center text-xs text-slate-400">
+          Illustrative preview · Event details may vary
+        </p>
       </div>
     </section>
   );
